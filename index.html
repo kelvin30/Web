@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+    crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="navbar__container">
+          <a href="/" id="navbar__logo"></i>Logo</a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="/" class="navbar__links">Homepage</a>
+            </li>
+           
+            
+            <li class="navbar__item "  >
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Classes</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="/">Class1</a>
+                      <a href="/">Class2</a>
+                      <a href="/">Class3</a>
+                    </div>
+                  </div>
+            </li>
+               
+            <li class="navbar__item">
+              <a href="/" class="navbar__links">Coming soon</a>
+            </li>
+            <li class="navbar__btn"><a href="/" class="navbar__links">Sign In</a></li>
+
+            <li id="date" class="navbar__item"><a href="/" class="navbar__date"></a></li>
+
+            <li id="date" >
+                <div class="search-box">
+                <button class="btn-search"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                  width="16" height="16" 
+                  fill="currentColor" 
+                  class="bi bi-search"
+                   viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg></button>
+                <input type="text" class="input-search" placeholder="Search">
+                <i class="fa-regular fa-magnifying-glass"></i>
+                </input>
+              </div>
+            </li>
+
+            
+          </ul>
+          <a id="menu-icon" class="menu-icon">
+            <i class="fa fa-bars"></i>
+        </a>
+        </div>
+      </nav>
+
+        
+</nav>
+<div class="background">
+        <!-- Hero Section -->
+        <div class="main">
+            <div class="main__container">
+              <div class="main__content">
+                <h1>Josep Watson - How His Life Improved from</h1>
+                <h1>Becoming an E-Sports Legend</h1>
+                <div class="hr"><hr/></div>
+              </div>
+            </div>
+          </div>
+            <!-- End Hero Section -->
+             <span class="space"></span>
+            <!-- About Section -->
+
+        <!--Card Section-->    
+        <div class="about">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Get Access to Online Classes</h5>
+              <h6 class="card-subtitle mb-2">To Unlock this content, please input your email in the bar below.</h6>
+              <input class="email" type="email" placeholder="something@email.com" >
+                <button id="submit" type="button" class="btn-submit" onclick="submitFunction()">Subscribe</button>
+            </div>
+          
+          </div>
+         <!--Video Section-->
+          <div class="video">
+           <video  width="280" height="300" controls>
+            <source src="class.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+           </video>
+            </div>
+          </div>
+      </div>
+</body>
+</html>
+<script src="index.js"></script>
