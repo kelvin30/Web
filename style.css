@@ -7,10 +7,12 @@
 
   body {
 
-      background-color: #313030;
+      /* background-color: #313030; */
+      background-color: black;
   }
 
   .background{
+
         background-image: url("uni.jpg");
         height: 100%;
         background-position: center;
@@ -20,6 +22,7 @@
 
 /* Navbar */
 .navbar {
+
   background: #131313;
   height: 80px;
   display: flex;
@@ -60,17 +63,10 @@
   height: 100%;
 }
 .navbar__links:hover{
-  color: white;
+  color: #b32266;
 
 }
 
-/* .navbar__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-  width: 100%;
-}  */
 #date{
   color: #fff;
   font-size: 1.2rem;
@@ -88,16 +84,22 @@
 }
 
 .dropbtn {
-  background-color: #131313;
   color: white;
-  padding: 16px;
+  padding: 2px;
   font-size: 20px;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+
+}
+
+.dropbtn:hover{
+  color: #b32266;
 }
 
 .dropbtn:hover, .dropbtn:focus {
   background-color: #131313;
+
 }
 
 .dropdown {
@@ -108,7 +110,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #fff;
+  background-color: #b32266;
   min-width: 160px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -122,68 +124,49 @@
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {
+  background-color: #131313;
+}
 
-.show {display: block;}
+.show {
+  display: block;
+}
 
-/* Search box */
-.search-box{
-  width: fit-content;
-  height: fit-content;
+.box{
   position: relative;
 }
- .bi-search{
-  color: #b32266;
- }
 
-.input-search{
-  height: 50px;
-  width: 50px;
-  border-style: none;
+.input {
   padding: 10px;
-  font-size: 18px;
-  letter-spacing: 2px;
+  width: 65px;
+  height: 65px;
+  background: none;
+  border: 4px solid #b32266;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: Comic Sans MS;
+  font-size: 26px;
+  color: #fff;
   outline: none;
-  border-radius: 25px;
-  transition: all .5s ease-in-out;
-  background-color: #131313;
-  padding-right: 40px;
-  color:#fff;
+  transition: .5s;
 }
-.input-search::placeholder{
-  color:rgba(255,255,255,.5);
-  font-size: 18px;
-  letter-spacing: 2px;
-  font-weight: 100;
+.box:hover input{
+  width: 350px;
+  background: #3b3640;
+  border-radius: 10px;
 }
-.btn-search{
-  width: 50px;
-  height: 50px;
-  border-style: none;
-  font-size: 20px;
-  font-weight: bold;
-  outline: none;
-  cursor: pointer;
-  border-radius: 50%;
+.box i{
   position: absolute;
-  right: 0px;
-  color:#ffffff ;
-  background-color:transparent;
-  pointer-events: painted;
+  top: 50%;
+  right: 15px;
+  transform: translate(-50%,-50%);
+  font-size: 26px;
+  color: #b32266;
+  transition: .2s;
 }
-.btn-search:focus ~ .input-search{
-  width: 300px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-}
-.input-search:focus{
-  width: 300px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+.box:hover i{
+  opacity: 0;
+  z-index: -1;
 }
 
 @media screen and (max-width: 600px){
@@ -237,13 +220,11 @@ background-color: #fff;
 
 
 .cards {
-background-color: #131313;
+background-color: black;
 justify-content: center;
 display: flex;
 flex-wrap: wrap;
 list-style: none;
-margin: 0;
-padding: 0;
 }
 
 .cards_item {
@@ -271,31 +252,41 @@ box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 display: flex;
 flex-direction: column;
 overflow: hidden;
+display: flex;
+flex-wrap: wrap;
 }
 
 .card_content {
-padding: 1rem;
+padding: 0.800rem;
+justify-content: center;
+align-items: center;
+font-size: 1.2rem;
+margin-top: 4rem;
 /* background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%); */
 }
 
 .card_title {
-text-align: center;
 justify-content: center;
 color: #ffffff;
-font-size: 1.8rem;
-font-weight: 300;
+/* font-weight: 300;
 letter-spacing: 1px;
 text-transform: capitalize;
-margin: 0px;
+margin: 0px; */
 }
 
 .card_text {
 text-align: center;
 color: #ffffff;
 font-size: 1.2rem;
+/* font-size: 1.2rem;
 line-height: 1.5;
 margin-bottom: 1.25rem;
-font-weight: 200;
+font-weight: 200; */
+}
+
+.card_item{
+display: flex;
+padding: 1rem;
 }
 
 .btn-submit{
@@ -309,11 +300,24 @@ font-weight: 200;
   width: 100%;
 }
 
+
 .video-btns{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
+}
+
+.video_card{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video_content{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .btn-classes{
@@ -324,6 +328,7 @@ font-weight: 200;
   cursor: pointer;
   margin-top: 10px;
   padding:10px;
+  margin-right: 20px;
 }
 .btn-orders{
   background-color: #b32266;
@@ -333,11 +338,11 @@ font-weight: 200;
   cursor: pointer;
   margin-top: 10px;
   padding:10px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .email{
-  color: #fff;
+  color: #131313;
   background-color: #ddd;
   border: solid 1px #fff;
   border-radius: 5px;
@@ -345,4 +350,10 @@ font-weight: 200;
   padding: 10px;
   margin-top: 20px;
   width: 100%;
+}
+
+.video-text{
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 5.5rem;
 }

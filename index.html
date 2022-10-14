@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <title>HTML Website</title>
-    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -17,8 +22,13 @@
      <!-- Navbar -->
      <nav class="navbar">
         <div class="navbar__container">
-          <a href="/" id="navbar__logo"></i>Logo</a>
-          <div class="navbar__toggle" id="mobile-menu">
+          <i id="logo" class="fa fa-book" style=" width: fit-content;
+          height: 80%;
+          background-color: #131313;
+          font-size:48px;
+          margin-right: 100px;
+          color:white">Online</i>
+          <div class="navbar__toggle">
             <span class="bar"></span> <span class="bar"></span>
             <span class="bar"></span>
           </div>
@@ -30,9 +40,10 @@
 
             <li class="navbar__item "  >
                 <div class="dropdown">
-                    <button onclick="myFunction()"
-class="dropbtn">Classes</button>
-                    <div id="myDropdown" class="dropdown-content">
+                  <a class="dropbtn" onclick="myFunction()">Classes
+                    <i class="fa fa-caret-down"></i>
+                  </a>
+                    <div id="dropdown" class="dropdown-content">
                       <a href="/">Class1</a>
                       <a href="/">Class2</a>
                       <a href="/">Class3</a>
@@ -41,7 +52,16 @@ class="dropbtn">Classes</button>
             </li>
 
             <li class="navbar__item">
-              <a href="/" class="navbar__links">Coming soon</a>
+              <div class="dropdown">
+                <a class="dropbtn" onclick="commingFunction()">Comming Soon
+                  <i class="fa fa-caret-down"></i>
+                </a>
+                  <div id="commingDrop" class="dropdown-content">
+                    <a href="/">Comming1</a>
+                    <a href="/">Comming2</a>
+                    <a href="/">Comming3</a>
+                  </div>
+                </div>
             </li>
             <li class="navbar__btn"><a href="/"
 class="navbar__links">Sign In</a></li>
@@ -50,36 +70,26 @@ class="navbar__links">Sign In</a></li>
 class="navbar__date"></a></li>
 
             <li id="date" >
-                <div class="search-box">
-                <button class="btn-search">
-                  <svg xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16"
-                  fill="currentColor"
-                  class="bi bi-search"
-                   viewBox="0 0 16 16">
-                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397
-1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0
-1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1
-1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg></button>
-                <input type="text" class="input-search" placeholder="Search">
-                <i class="fa-regular fa-magnifying-glass"></i>
-                </input>
-              </div>
+              <div class="box">
+                <form name="search">
+                    <input type="text" class="input" name="txt"
+onmouseout="this.value = ''; this.blur();">
+                </form>
+                <i class="fa fa-search" aria-hidden="true"></i>
+
+            </div>
+            </a>
             </li>
 
 
           </ul>
-          <a id="menu-icon" class="menu-icon">
-            <i class="fa fa-bars"></i>
-        </a>
         </div>
       </nav>
 
-
+        <!--Navbar-->
 </nav>
 <div class="background">
-        <!-- Hero Section -->
+        <!-- Cover Section -->
         <div class="main">
             <div class="main__container">
               <div class="main__content">
@@ -89,9 +99,9 @@ class="navbar__date"></a></li>
               </div>
             </div>
           </div>
-            <!-- End Hero Section -->
+            <!-- Cover Section -->
              <span class="space"></span>
-            <!-- About Section -->
+
 
         <!--Card Section-->
         <ul class="cards">
@@ -109,20 +119,27 @@ onclick="submitFunction()">Subscribe</button>
             </div>
           </li>
           <li class="cards_item">
-            <div class="card">
-              <div class="card_image"><video src="class.mp4"
-width="450" height="260" controls ></video></div>
+            <div class="cards">
+              <div class="video_content">
+                <div class="video_card">
+              <video src="class.mp4" width="450" height="260" controls ></video>
+                </div>
+
               <div class="card_content">
-                <h2 class="card_title">Some text added here</h2>
+                <h2 class="video-text">Some text added here</h2>
                 <div class="video-btns">
                 <button class="btn-classes">Classes</button>
                 <button class="btn-orders">Orders</button>
+
+                </div>
               </div>
               </div>
             </div>
           </li>
         </ul>
       </div>
+
+      <!--Card Section-->
 </body>
 </html>
 <script src="index.js"></script>
