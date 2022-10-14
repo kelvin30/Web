@@ -244,6 +244,8 @@ padding: 1rem;
 }
 }
 
+/* Card Section */
+
 .card {
 background-color: transparent;
 border-radius: 0.25rem;
@@ -300,6 +302,15 @@ padding: 1rem;
   width: 100%;
 }
 
+.other_text{
+  text-align: center ;
+  margin-top: 10%;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+/* Video Section */
 
 .video-btns{
   display: flex;
